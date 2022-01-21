@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Upload Portal</title>
+
+    <!-- favicon and css styling -->
+    <link href="/images/favicon.png" rel="icon" />
+    <link href="/styles/upload.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>MapBox Map Upload</h1>
+
+      <form>
+        <!-- mapname input field -->
+        <div class="form-group">
+          <span>Mapname</span>
+          <input type="text"
+            class="form-field"
+            placeholder="My Placeholder Map"
+            onchange="handleMapboxName(event)"
+          />
+        </div>
+
+        <!-- style url input field -->
+        <div class="form-group">
+          <span>Style URL</span>
+          <input type="text"
+            class="form-field"
+            placeholder="mapbox://styles/username/[id]"
+            onchange="handleMapboxUrl(event)"
+          />
+        </div>
+
+        <!-- public key input field -->
+        <div class="form-group">
+          <span>Public Key</span>
+          <input type="text"
+            class="form-field"
+            placeholder="pk.BkM3d2c3lrMWs3In0..."
+            onchange="handleMapboxToken(event)"
+          />
+        </div>
+
+        <!-- form submission button -->
+        <div id="submission-container">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+      <!-- custom display message / error message -->
+      <p>Need help? Check out our <a href="/help">instructions!</a></p>
+    </div>
+
+    <div class="container">
+      <h1>Historical Map Upload</h1>
+
+      <form>
+        <!-- mapname input field -->
+        <div class="form-group">
+          <span>Mapname</span>
+          <input type="text"
+            class="form-field"
+            placeholder="My Placeholder Map"
+            onchange="handleHistoricalName(event)"
+          />
+        </div>
+
+        <!-- layer url input field -->
+        <div class="form-group">
+          <span>Layer URL</span>
+          <input type="text"
+            class="form-field"
+            placeholder="https://atlmaps.org/layers/atlp[id]"
+            onchange="handleHistoricalUrl(event)"
+          />
+        </div>
+
+        <!-- form submission button -->
+        <div id="submission-container">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+      <!-- custom display message / error message -->
+      <p>No instructions available yet. Stay tuned, though!</p>
+    </div>
+
+    <!-- form state and submission handler -->
+    <script type="text/javascript" src="/scripts/upload.js"></script>
+  </body>
+</html>

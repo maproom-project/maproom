@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Atlanta Map Room</title>
+
+    <!-- mapbox imports -->
+    <script src="https://bit.ly/3gnlxyt"></script>
+    <script src="https://bit.ly/3gjRFlY"></script>
+    <link href="https://bit.ly/31d0Wqw" rel="stylesheet" />
+    <link href="https://bit.ly/34sqX8B" rel="stylesheet" />
+
+    <!-- favicon & styling -->
+    <link href="/images/favicon.png" rel="icon" />
+    <link href="/styles/index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- map display -->
+    <div id="map"></div>
+
+    <!-- navigation buttons -->
+    <button class="button" id="up" onclick="handleMovement(0, -5)">&uarr;</button>
+    <button class="button" id="down" onclick="handleMovement(0, 5)">&darr;</button>
+    <button class="button" id="left" onclick="handleMovement(-5, 0)">&larr;</button>
+    <button class="button" id="right" onclick="handleMovement(5, 0)">&rarr;</button>
+
+    <!-- map dropdown selection -->
+    <div class="dropdown" id="map-pos">
+      <select class="dropdown-select" id="mapbox" onchange="handleMap(event)">
+        <option disabled selected>Select a Map</option>
+      </select>
+    </div>
+    
+    <!-- data-layer dropdown selection -->
+    <div class="dropdown" id="filter-pos">
+      <select class="dropdown-select" id="filters" onchange="handleFilter(event)" multiple>
+        <option disabled selected>Select a Dataset</option>
+      </select>
+    </div>
+
+    <!-- link to upload portal -->
+    <a href="/upload"><button class="button" id="upload-pos">Upload a Map 🗺</button></a>
+
+    <!-- lock button -->
+    <button class="button" id="lock" onclick="handleLock()">🔓 Unlocked</button>
+
+    <!-- controller script -->
+    <script type="module" src="/scripts/index.js"></script>
+  </body>
+</html>

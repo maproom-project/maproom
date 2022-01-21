@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Upload Instructions</title>
+
+    <link rel="stylesheet" href="/styles/help.css">
+  </head>
+
+  <body>
+    <section>
+      <h1>🗺 Maproom Upload Tutorial</h1>
+      <aside>To assist you in creating, uploading, and viewing your data.</aside>
+    </section>
+
+    <section>
+      <h2>📍 Getting Started with Mapbox</h2>
+      <div>
+        <p>
+          The Maproom project uses an open-source mapping platform called Mapbox. For the
+          majority of this tutorial, we'll be working with a product of theirs known as
+          Mapbox Studio, which is essentially like Photoshop for geographical data.
+        </p>
+        <p>
+          If you haven't already, navigate over to the <a href="https://mapbox.com">Mapbox
+          website</a> and create a new account. All maps you create and upload will be
+          associated with this account, so be sure to save your password somewhere safe!
+        </p>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>👨🏻‍💻 Importing Your Data</h2>
+      <div>
+        <p>
+          For the purposes of this tutorial, I'm going to provide you with a <a download
+          href="https://opendata.arcgis.com/datasets/1d4cb4e279c5485c95e1385769c9b723_28.zip">
+          practice dataset</a> to work with. Though Mapbox accepts all different types
+          of data, including KML, GPX, GeoJSON, Shapefile (zipped), CSV, and MBTiles,
+          we're going to be using a zipped shapefile for this demonstration.
+        </p>
+        <p>
+          Once you've downloaded the attached data, navigate to the Mapbox homepage and
+          click on your avatar in the top-right. A dropdown menu should appear with three
+          main options: <b>Account</b>, <b>Studio</b>, and <b>Documentation</b>. Select
+          <b>Studio</b> and, when the page loads, click the blue button labeled <b>New
+          Style</b>.
+        </p>
+        <p>
+          At this point, you're free to choose whichever template you like. Mapbox should
+          provide a preview of what the map will initially look like off to the right, and
+          the data you eventually upload will be superimposed on top. For visibility's sake,
+          I would encourage you to select either the light or dark variation of the
+          <b>Monochrome</b> style, both of which can be seen in the images below.
+        </p>
+        <img style="width: 49%" src="https://i.ibb.co/RzMnGnJ/light.png">
+        <img style="width: 49%" src="https://i.ibb.co/rd7zgJZ/dark.png">
+        <p>
+          Once you're in the editor view of the map, take a look at the toolbar located on
+          the left side of the screen. Because we want to import our dataset as a new layer,
+          select the <b>Layers</b> tab and click on the blue plus icon. This should open a
+          window titled <b>New Layer</b>, which is where we'll import and style the river
+          data downloaded previously. Now, click the <b>Upload Data</b> button, navigate to
+          the zipped shapefile, select it, and press <b>Submit</b>. After the upload has
+          finished processing, select the dataset, named <b>River_Streams_Atlanta_Region</b>,
+          as the source and rename the layer to something more appropriate. In the image
+          provided below, I chose to name it <b>ATL Rivers and Streams</b>.
+        </p>
+        <img style="width: 100%" src="https://i.ibb.co/8dyyvXK/upload.png">
+      </div>
+    </section>
+
+    <section>
+      <h2>🎨 Styling Your Data</h2>
+      <div>
+        <p>
+          Now that we've uploaded our data and selected it as the source, let's first check
+          to see what it looks like. On the map view, navigate to Atlanta, Georgia by typing
+          the desired location in the hourglass searchbar (located in the top-right of the
+          map view). Then, zoom in using the plus icon until the data is visible on the map.
+          If you see a collection of black, veiny-looking lines, then congrats—you've done
+          everything correct so far! If not, go back and double check your steps.
+        </p>
+        <p>
+          Because we're looking to display waterways, perhaps black isn't the best color to
+          use. In order to change this, select your layer in the leftmost panel and click the
+          <b>Style</b> tab if you're still in the <b>Select Data</b> panel (or simply press
+          "<b>[</b>" on your keyboard). Now, using the gradient provided under the <b>Color</b>
+          tab, change the data to a more fitting color. Once you've finished that up, you
+          should be all done customizing the data! Go ahead and publish your map by clicking
+          the <b>Publish</b> button located in the top right corner of the screen.
+        </p>
+        <img style="width: 100%" src="https://i.ibb.co/XxLsmfQ/mapbox.png">
+      </div>
+    </section>
+
+    <section>
+      <h2>🏠 Uploading to Maproom</h2>
+      <p>
+        Now that we've published our map, we must also make sure it's publicly-accessible.
+        In order to do so, navigate back to <a href="https://studio.mapbox.com">Mapbox
+        Studio</a>, click on the three vertical dots next to your map, and select <b>Make
+        Public</b>. Next, click the three dots again, copy the <b>Style Url</b>, and
+        navigate to the Maproom's <a href="/upload" target="_blank">upload portal</a>.
+      </p><p>
+        Here, you can provide a unique name for your custom map using the <b>Mapname</b>
+        input field. In this case, I'm going to give it a broad title, "Atlanta Data",
+        because I might want to add more Atlanta-related layers to the map in the future.
+        Next, paste the copied style url into the <b>Style Url</b> textbox and navigate
+        back to <a target="_blank" href="https://account.mapbox.com".>Mapbox Account</a>
+        (in a new tab, of course) to access your account's public token. Scroll down on
+        the page until you reach a section labeled <b>Access Tokens</b>—here, you should
+        see a <b>Default Public Token</b> of the form "pk.eyJ1IjoiYX". Copy this value,
+        navigate back to the upload portal, paste the token in the <b>Public Key</b> input
+        field, and click the <b>Submit</b> button.
+      </p><p>
+        If done correctly, you should be met with a message claiming that "Your map is
+        pending approval". This means it has been successfully uploaded through our portal
+        and will be displayed on the live site once we're able to verify and approve it,
+        so just sit tight for the time being! In the meantime, feel free to check out some
+        of the other <a href="/">approved maps</a>.
+      </p>
+    </section>
+  </body>
+</html>

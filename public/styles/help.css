@@ -1,0 +1,73 @@
+/* ========================= */
+/*      GENERAL STYLING      */
+/* ========================= */
+
+html {
+  background: #333333;
+  color: #bbbbbb;
+  display: table;
+  margin: auto;
+}
+
+body {
+  padding: 15vh 5vh;
+  max-width: 40em;
+
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, sans-serif;
+  font-size: 1.25em;
+}
+
+aside {
+  border-width: 0em;
+  border-left-width: 0.15em;
+  border-style: solid;
+
+  color: #7a7a7a;
+  font-weight: 600;
+  
+  margin-left: 0.75em;
+  padding-left: 0.75em;
+}
+
+/* ========================= */
+/*      TEXT ATTRIBUTES      */
+/* ========================= */
+
+h1 {
+  font-weight: 900;
+  font-size: 2.25em;
+  color: #ffffff;
+}
+h2 {
+  font-weight: 900;
+}
+h1, h2, h3 {
+  color: #eeeeee;
+  margin: 0em;
+}
+
+/* ========================= */
+/*    APPROPRIATE MARGINS    */
+/* ========================= */
+
+section:not(:last-of-type) {
+  margin-bottom: 2.5em;
+}
+section :first-child {
+  margin-bottom: 0.25em;
+}
+
+/* ======================== */
+/*        HYPERLINKS        */
+/* ======================== */
+
+a {
+  transition: all ease 0.33s;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+}
+a:hover {
+  filter: brightness(80%);
+}
